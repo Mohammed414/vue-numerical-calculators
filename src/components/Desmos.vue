@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="btn" @click="doInterpolation">interpolate!</button>
+    <!-- <button class="btn" @click="doInterpolation">interpolate!</button> -->
     <br />
     <div
       id="calculator"
@@ -69,6 +69,9 @@ export default {
           });
         });
       });
+      if (newVal.length >= 2) {
+        this.doInterpolation();
+      }
     },
   },
   props: ["points"],
